@@ -1,5 +1,13 @@
+import { Button } from "./components/atoms";
+
 function App() {
-  return <div>halo</div>;
+  return (
+    <div>
+      <Button>
+        <span>Halo</span>
+      </Button>
+    </div>
+  );
 }
 
 export default App;
