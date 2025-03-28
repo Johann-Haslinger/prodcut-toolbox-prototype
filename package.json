@@ -12,6 +12,8 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@emotion/styled": "^11.14.0",
+    "framer-motion": "^12.6.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "styled-components": "^6.1.16",
