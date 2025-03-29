@@ -10,7 +10,9 @@ export default {
       body: ["Titillium Web", "sans-serif"],
     },
     extend: {
-      colors: {},
+      colors: {
+        "primary-color": "#59B7F4"
+      },
       backgroundColor: {},
     },
   },

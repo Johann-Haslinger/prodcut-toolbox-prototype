@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { EyeClosed } from "lucide-react";
-import "../../../index.css";
-import { ButtonColor } from "../../../types/enums";
+import "../../../../index.css";
+import { ButtonColor } from "../../../../types/enums";
 import Button from "./IconButton";
 
 const meta = {
-  title: "Atoms/IconButton",
+  title: "Components/Atoms/Inputs/IconButton",
   component: Button,
   parameters: {
     layout: "centered",
