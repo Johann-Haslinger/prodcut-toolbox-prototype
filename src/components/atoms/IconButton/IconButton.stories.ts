@@ -1,9 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { EyeClosed } from "lucide-react";
 import "../../../index.css";
-import Button from "./Button";
+import { ButtonColor } from "../../../types/enums";
+import Button from "./IconButton";
 
 const meta = {
-  title: "Atoms/Button",
+  title: "Atoms/IconButton",
   component: Button,
   parameters: {
     layout: "centered",
@@ -15,20 +17,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Standard: Story = {
   args: {
-    children: "Standard",
-  },
-};
-
-export const Primary: Story = {
-  args: {
-    variant: "primary",
-    children: "Primary",
-  },
-};
-
-export const Secondary: Story = {
-  args: {
-    variant: "secondary",
-    children: "Secondary",
+    icon: EyeClosed,
+    tooltip: "Click me!",
+    color: ButtonColor.BLUE,
   },
 };

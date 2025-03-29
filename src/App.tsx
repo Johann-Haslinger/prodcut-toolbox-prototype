@@ -1,11 +1,11 @@
+import { EyeClosed } from "lucide-react";
 import { Button } from "./components/atoms";
+import { ButtonColor } from "./types/enums";
 
 function App() {
   return (
-    <div>
-      <Button>
-        <span>Halo</span>
-      </Button>
+    <div className="p-40">
+      <Button icon={EyeClosed} color={ButtonColor.BLUE} tooltip="hallo" />
     </div>
   );
 }
