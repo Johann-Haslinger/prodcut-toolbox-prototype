@@ -6,13 +6,13 @@ import { ButtonColor } from "../../../../types/enums";
 
 const ButtonWrapper = tw.div`relative select-none`;
 
-const InnerCircleWrapper = styled(motion.div)(tw`flex cursor-pointer flex-col items-center`);
+const InnerCircleWrapper = styled(motion.div)(tw`flex flex-col items-center`);
 const InnerCircle1 = styled(motion.div)<{ color: string }>`
   ${tw`absolute px-8 max-w-48 min-w-28 whitespace-nowrap truncate font-bold text-lg bottom-[-16px] h-16 border-[3px] border-black rounded-full`}
   background-color: ${({ color }) => color};
 `;
 const InnerCircle2 = styled(motion.button)<{ color: string }>`
-  ${tw`absolute font-bold text-lg px-8 max-w-48 min-w-28 whitespace-nowrap truncate outline-none flex justify-center items-center text-black h-16 border-[3px] border-black rounded-full`}
+  ${tw`absolute font-bold text-lg px-8 max-w-48 min-w-28 whitespace-nowrap truncate outline-none flex justify-center items-center text-black h-16 border-[3px] border-black rounded-full cursor-[url(/assets/images/cursor-default.png), auto]`}
   background-color: ${({ color }) => color};
 `;
 
@@ -58,8 +58,10 @@ export const TextButton = forwardRef<HTMLButtonElement, ButtonProps>(
             whileFocus={{ bottom: BOTTOM_POSITIONS.focus }}
             whileTap={{
               bottom: BOTTOM_POSITIONS.tap,
+              cursor: "url(/assets/images/cursor-grabbing.png), auto",
               transition: { type: "spring", stiffness: 100, damping: 15 },
             }}
+            
             onPointerDown={handleTapStart}
             onPointerUp={handleTapEnd}
           >

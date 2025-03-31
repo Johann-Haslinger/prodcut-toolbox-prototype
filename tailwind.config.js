@@ -11,10 +11,10 @@ export default {
     },
     extend: {
       colors: {
-        "primary-color": "#209CF5"
+        "primary-color": "#209CF5",
       },
-      backgroundColor: {},
-    },
+      backgroundColor: {},    },
   },
+
   plugins: [],
 };

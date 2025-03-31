@@ -11,17 +11,17 @@ const OuterCircleWrapper = tw.div``;
 const OuterCircle1 = tw.div`absolute bottom-0 w-28 h-24 border-[3px] border-black rounded-[50%] bg-white dark:bg-[#1A2D3C]`;
 const OuterCircle2 = tw.div`absolute bottom-4 w-28 h-24 border-[3px] border-black rounded-[50%] bg-white dark:bg-[#1A2D3C]`;
 
-const InnerCircleWrapper = styled(motion.div)(tw`flex cursor-pointer flex-col items-center`);
+const InnerCircleWrapper = styled(motion.div)(tw`flex cursor-[url(/assets/images/cursor-default.png), auto] active:cursor-[url(/assets/images/cursor-grabbing.png), auto] flex-col items-center`);
 const InnerCircle1 = styled(motion.div)<{ color: string }>`
   ${tw`absolute bottom-9 w-24 h-20 border-[3px] border-black rounded-[50%]`}
   background-color: ${({ color }) => color};
 `;
 const InnerCircle2 = styled(motion.button)<{ color: string }>`
-  ${tw`absolute outline-none flex justify-center items-center text-black bottom-14 w-24 h-20 border-[3px] border-black rounded-[50%]`}
+  ${tw`absolute cursor-[url(/assets/images/cursor-default.png), auto] active:cursor-[url(/assets/images/cursor-grabbing.png), auto] outline-none flex justify-center items-center text-black bottom-14 w-24 h-20 border-[3px] border-black rounded-[50%]`}
   background-color: ${({ color }) => color};
 `;
 
-const ToolTip = tw(ReactTooltip)`mb-2`;
+const ToolTip = tw(ReactTooltip)`mb-2 p-2 z-50`;
 
 export type CombinedProps = Omit<ButtonHTMLAttributes<HTMLButtonElement>, "children"> &
   MotionProps & {
@@ -29,7 +29,7 @@ export type CombinedProps = Omit<ButtonHTMLAttributes<HTMLButtonElement>, "child
   };
 
 export interface ButtonProps extends CombinedProps {
-  icon: LucideIcon;
+  icon?: LucideIcon;
   tooltip: string;
   color?: ButtonColor;
   className?: string;
@@ -64,10 +64,13 @@ export const IconButton = forwardRef<HTMLButtonElement, ButtonProps>(
             onPointerDown={handleTapStart}
             onPointerUp={handleTapEnd}
           >
-            <Icon size={44} strokeWidth={1.5} />
+          {Icon &&  <Icon size={44} strokeWidth={1.5} />}
           </InnerCircle2>
         </InnerCircleWrapper>
-        <ToolTip place="top" id="button-id" content={tooltip} />
+        <ToolTip style={{
+          backgroundColor: "black",
+          borderRadius: "0px",
+        }} place="top" id="button-id" content={tooltip} />
       </ButtonWrapper>
     );
   }

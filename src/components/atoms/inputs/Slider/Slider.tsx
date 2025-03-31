@@ -23,12 +23,12 @@ const OutlineWrapper = styled.div`
 `;
 
 const SliderContainer = styled.div`
-  ${tw`w-96 h-10 bg-gradient-to-r from-[#7CC5F7] dark:from-[#239FF2]/70 to-[#9EF1D9] dark:to-[#69FCB2]/70 relative`}
+  ${tw`w-96 h-10 bg-gradient-to-r from-[#239FF2] dark:from-[#239FF2]/70 to-[#9EF1D9] dark:to-[#9EF1D9]/70 relative`}
   clip-path: polygon(7% 0%, 93% 0%, 100% 50%, 93% 100%, 7% 100%, 0% 50%);
 `;
 
 const SliderCircle = styled(motion.div)`
-  ${tw`size-16 z-10 top-[-8px] flex items-center justify-center space-x-1.5 border-[3px] border-black bg-white rounded-full absolute transform -translate-y-1/2 cursor-pointer`}
+  ${tw`size-16 z-10 top-[-8px] flex items-center justify-center space-x-1.5 border-[3px] border-black bg-white rounded-full absolute transform -translate-y-1/2`}
 `;
 
 const ToolTipWrapper = styled(motion.div)`
@@ -117,6 +117,9 @@ const Slider = ({ labelLeft, labelRight, value = 0, onChange, descriptionDict }:
           }}
           style={{
             left: `calc(${sliderValue * 90}% - 16px)`,
+            cursor: isDragging
+              ? "url(/assets/images/cursor-grabbing.png), auto"
+              : "url(/assets/images/cursor-default.png), auto",
           }}
           transition={{
             type: "keyframes",
@@ -135,12 +138,12 @@ const Slider = ({ labelLeft, labelRight, value = 0, onChange, descriptionDict }:
             }}
           >
             <TooltipCircle>
-                {
+              {
                 Object.entries(descriptionDict)
                   .map(([until, description]) => [parseFloat(until), description] as [number, string])
                   .sort(([a], [b]) => a - b)
                   .find(([until]) => sliderValue <= until)?.[1]
-                }
+              }
             </TooltipCircle>
             <TooltipStroke1 />
             <TooltipStroke2 />

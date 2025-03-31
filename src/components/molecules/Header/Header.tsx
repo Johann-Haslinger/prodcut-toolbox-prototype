@@ -15,7 +15,7 @@ const Header = ({ heading, subHeading }: HeaderProps) => {
     <Container>
       <Heading>{heading}</Heading>
       <SubHeading>{subHeading}</SubHeading>
-      <StyledImage src="/assets/images/snakeLine.png" alt="Decorative line" />
+      <StyledImage src="/assets/images/snake-line.png" alt="Decorative line" />
     </Container>
   );
 };
