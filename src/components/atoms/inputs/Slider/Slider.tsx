@@ -23,7 +23,7 @@ const OutlineWrapper = styled.div`
 `;
 
 const SliderContainer = styled.div`
-  ${tw`w-96 h-10 bg-gradient-to-r from-[#239FF2]/70 to-[#69FCB2]/70 relative`}
+  ${tw`w-96 h-10 bg-gradient-to-r from-[#7CC5F7] dark:from-[#239FF2]/70 to-[#9EF1D9] dark:to-[#69FCB2]/70 relative`}
   clip-path: polygon(7% 0%, 93% 0%, 100% 50%, 93% 100%, 7% 100%, 0% 50%);
 `;
 
@@ -36,11 +36,11 @@ const ToolTipWrapper = styled(motion.div)`
 `;
 
 const TooltipCircle = styled.div`
-  ${tw`size-48 z-10 flex items-center justify-center space-x-1.5 border-[3px] border-black bg-white text-white text-base text-center leading-[20px] font-semibold p-6 dark:text-black rounded-full`}
+  ${tw`size-48 z-10 flex items-center justify-center space-x-1.5 border-[3px] border-black bg-white text-base text-center leading-[20px] font-semibold p-6 text-black rounded-full`}
 `;
 
 const TooltipStroke1 = styled.div`
-  ${tw`h-36 relative right-[220px] top-16 rotate-[24deg] w-[3px] bg-black`}
+  ${tw`h-48 relative right-[220px] top-14 rotate-[18deg] w-[3px] bg-black`}
 `;
 
 const TooltipStroke2 = styled.div`

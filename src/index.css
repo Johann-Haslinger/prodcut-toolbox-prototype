@@ -1,3 +1,17 @@
+
+
+@font-face {
+  font-family: "noigrotesk";
+  src: url("/assets/fonts/NoiGrotesk-SemiBold.eot");
+  src: url("/assets/fonts/NoiGrotesk-SemiBold.eot") format("embedded-opentype"),
+    url("/assets/fonts/NoiGrotesk-SemiBold.woff2") format("woff2"),
+    url("/assets/fonts/NoiGrotesk-SemiBold.woff") format("woff"),
+    url("/assets/fonts/NoiGrotesk-SemiBold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+
 @font-face {
   font-family: "noigrotesk";
   src: url("/assets/fonts/NoiGrotesk-SemiBold.eot");
