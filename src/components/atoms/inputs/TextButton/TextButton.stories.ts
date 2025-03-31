@@ -1,24 +1,22 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { EyeClosed } from "lucide-react";
 import "../../../../index.css";
 import { ButtonColor } from "../../../../types/enums";
-import IconButton from "./IconButton";
+import TextButton from "./TextButton";
 
 const meta = {
-  title: "Components/Atoms/Inputs/IconButton",
-  component: IconButton,
+  title: "Components/Atoms/Inputs/TextButton",
+  component: TextButton,
   parameters: {
     layout: "centered",
   },
-} satisfies Meta<typeof IconButton>;
+} satisfies Meta<typeof TextButton>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Standard: Story = {
   args: {
-    icon: EyeClosed,
-    tooltip: "Click me!",
+    children: "Click Me!",
     color: ButtonColor.BLUE,
   },
 };
