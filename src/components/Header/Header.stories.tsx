@@ -3,7 +3,7 @@ import "../../../index.css";
 import Button from "./Header";
 
 const meta = {
-  title: "Components/Molecules/Header",
+  title: "Components/Header",
   component: Button,
   parameters: {
     layout: "centered",

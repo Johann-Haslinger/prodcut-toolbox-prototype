@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import "../../../../index.css";
-import { ButtonColor } from "../../../../types/enums";
+import "../../../index.css";
+import { ButtonColor } from "../../../types/enums";
 import IconButton from "./IconButton";
 
 const meta = {
-  title: "Components/Atoms/Inputs/IconButton",
+  title: "Components/Inputs/IconButton",
   component: IconButton,
   parameters: {
     layout: "centered",

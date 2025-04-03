@@ -2,7 +2,7 @@ import { motion, MotionProps } from "framer-motion";
 import { ButtonHTMLAttributes, forwardRef } from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
-import { ButtonColor } from "../../../../types/enums";
+import { ButtonColor } from "../../../types/enums";
 
 const ButtonWrapper = tw.div`relative select-none`;
 

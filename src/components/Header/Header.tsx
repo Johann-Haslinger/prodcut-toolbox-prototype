@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import tw from "twin.macro";
-import { Heading, SubHeading } from "../../atoms/typography";
+import { Heading, SubHeading } from "../typography";
 
 const Container = tw.div`space-y-6 mx-auto px-4 md:px-0 w-full md:w-1/2 xl:w-2/5`;
 const StyledImage = tw.img`w-2/3 md:w-1/2 mx-auto pt-4`;

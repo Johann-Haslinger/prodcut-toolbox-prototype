@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import "../../../../index.css";
+import "../../../index.css";
 import Heading from "./Heading";
 
 const meta = {
-  title: "Components/Atoms/Typography/Heading",
+  title: "Components/Typography/Heading",
   component: Heading,
   parameters: {
     layout: "centered",

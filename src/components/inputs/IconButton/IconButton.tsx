@@ -4,7 +4,7 @@ import { ButtonHTMLAttributes, forwardRef } from "react";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import styled from "styled-components";
 import tw from "twin.macro";
-import { ButtonColor } from "../../../../types/enums";
+import { ButtonColor } from "../../../types/enums";
 
 const ButtonWrapper = tw.div`relative w-28 h-[136px]`;
 const OuterCircleWrapper = tw.div``;

@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from "@storybook/react";
-import "../../../../index.css";
+import "../../../index.css";
 import SubHeading from "./SubHeading";
 
 const meta = {
-  title: "Components/Atoms/Typography/SubHeading",
+  title: "Components/Typography/SubHeading",
   component: SubHeading,
   parameters: {
     layout: "centered",
